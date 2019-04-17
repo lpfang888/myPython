@@ -22,15 +22,25 @@ def view_stock(stock_code):
         elif number == 2:
             print("昨日收盘价:", str_array[number])
         elif number == 3:
-            print("当前价格:", str_array[number])
+            print('[当前价格]:\033[1;35m %s \033[0m' % str_array[number])
         elif number == 4:
             print("今日最高价:", str_array[number])
         elif number == 5:
             print("今日最低价:", str_array[number])
+    return str_array[3]
 
 
-stock_list = ["sz000063", "sh000036", "sh000063", "sz000036"]
+stock_list = ["sz000063", "sh600050", "sh600031", "sz000725", "sz000100"]
+
+buy_price = [29.860, 6.950, 12.930, 4.000, 4.125]
 
 for i in range(len(stock_list)):
     print("=========================================================")
-    view_stock(stock_list[i])
+    current_price = view_stock(stock_list[i])
+    print("[购买价格]:\033[1;32m %s \033[0m" % buy_price[i])
+
+    difference_price = float(current_price) - buy_price[i]
+    if difference_price > 0:
+        print("[购买价格]:\033[1;35m %.2f \033[0m" % difference_price)
+    else:
+        print("[购买价格]:\033[1;32m %.2f \033[0m" % difference_price)
