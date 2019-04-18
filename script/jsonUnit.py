@@ -43,4 +43,4 @@ for i in range(len(stock_list)):
     if difference_price > 0:
         print("[购买价格]:\033[1;35m %.2f \033[0m" % difference_price)
     else:
-        print("[购买价格]:\033[1;32m %.2f \033[0m" % difference_price)
+        print("[差异价格]:\033[1;32m %.2f \033[0m" % difference_price)
