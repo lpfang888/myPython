@@ -11,20 +11,20 @@ print(workbook.sheet_names())
 # 获取数据sheet
 data_sheet = workbook.sheet_by_name("test")
 
-rowsnum: int = data_sheet.nrows
-colsnum = data_sheet.ncols
+rows_num: int = data_sheet.nrows
+cols_num = data_sheet.ncols
 
-print(rowsnum)
-print(colsnum)
+print(rows_num)
+print(cols_num)
 
 cell_A1 = data_sheet.cell(0, 0).value
 
-insert_sql: str = """insert into t_visit_cust_duty (cust_id, cust_name, duty_user_code) values (%d,'%s','%.f');"""
+insert_sql: str ="""insert into t_visit_cust_duty (cust_id, cust_name, duty_user_code) values (%d,'%s','%.f');"""
 
-for i in range(0, rowsnum):
+for i in range(0, rows_num):
     if i == 0:
         continue
-    for j in range(0, colsnum):
+    for j in range(0, cols_num):
         if j > 5:
             cell_value = str(data_sheet.cell(i, j).value)
             if len(cell_value) > 0:
