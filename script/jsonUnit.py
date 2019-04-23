@@ -27,8 +27,10 @@ def view_stock(stock_code):
             print("今日最高价:", str_array[number])
         elif number == 5:
             print("今日最低价:", str_array[number])
-    a = float(str_array[3]) - float(str_array[2]) * 100
-    print("[今日跌涨]:%.2f" % (a / float(str_array[2])), "%")
+    a = float(str_array[2])
+    b = float(str_array[3])
+    c = ((b - a) / a) * 100
+    print("[今日跌涨]:%.2f" % c, "%")
     return str_array[3]
 
 
