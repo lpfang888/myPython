@@ -34,9 +34,9 @@ def view_stock(stock_code):
     return str_array[3]
 
 
-stock_list = ["sz000063", "sh600050", "sh600031", "sz000725", "sz000100"]
+stock_list = ["sz000063", "sh603305", "sh600031", "sz000725", "sz000100"]
 
-buy_price = [29.860, 6.950, 12.680, 4.000, 3.940]
+buy_price = [29.860, 0, 12.430, 4.000, 3.940]
 
 for i in range(len(stock_list)):
     print("=========================================================")
