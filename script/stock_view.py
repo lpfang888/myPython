@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 # coding=utf-8
 import urllib.request
-import script.config_operate
-
-stock_config = script.config_operate
+import config_operate
 
 
 def get_html(url):
@@ -37,9 +35,9 @@ def view_stock(stock_code):
     return str_array[3]
 
 
-stock_list = stock_config.stock_list.split(',')
+stock_list = config_operate.stock_list.split(',')
 
-buy_price = stock_config.buy_price.split(',')
+buy_price = config_operate.buy_price.split(',')
 
 for i in range(len(stock_list)):
     print("=========================================================")
