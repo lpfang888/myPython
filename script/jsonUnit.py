@@ -17,3 +17,18 @@ print("JSON 对象：", json_str)
 data2 = json.loads(json_str)
 print("data2['name']: ", data2['name'])
 print("data2['url']: ", data2['url'])
+
+
+def dd():
+    i: int = 1;
+    j: int = 0;
+
+    for i in range(0, 365):
+        j += i
+        print(j)
+    print(j)
+
+
+dd()
+
+

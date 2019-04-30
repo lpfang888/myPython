@@ -49,3 +49,6 @@ for i in range(len(stock_list)):
         print("[差异价格]:\033[1;35m %.2f \033[0m" % difference_price)
     else:
         print("[差异价格]:\033[1;32m %.2f \033[0m" % difference_price)
+
+    price = float(buy_price[i]) * (1.00 - 0.05)
+    print("[买入价位]:\033[1;35m %.2f \033[0m" % float(price))
