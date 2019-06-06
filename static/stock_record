@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc>
+    <books>
+        <book>
+            <id>111</id>
+            <name>姓名</name>
+        </book>
+        <book>
+            <id>222</id>
+            <name>性别</name>
+        </book>
+    </books>
+    <trade>
+        <date>2019-08-01</date>
+        <amount>100.00</amount>
+    </trade>
+</doc>
