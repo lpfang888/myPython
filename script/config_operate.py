@@ -5,7 +5,7 @@ import configparser
 
 # 初始化类
 config = configparser.ConfigParser()
-config.read("../config/stock.ini")
+config.read("/Users/fangliangpei/fanglp/myPython/myPython/config/stock.ini")
 
 stock_url = config.get('stock_base', 'stock_url')
 stock_code = config.get('stock_base', 'stock_code')
